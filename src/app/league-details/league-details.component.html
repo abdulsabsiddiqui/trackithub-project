@@ -1,0 +1,49 @@
+<form class="league-filter">
+  <mat-form-field class="example-form-field">
+    <mat-label>Filter</mat-label>
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput type="text">
+    <button matSuffix mat-icon-button aria-label="Clear">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+</form>
+<table matSort mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!-- League Column -->
+  <ng-container matColumnDef="league">
+    <th mat-sort-header="league" mat-header-cell *matHeaderCellDef> League </th>
+    <td mat-cell *matCellDef="let element"> {{element.league}} </td>
+  </ng-container>
+
+  <!-- Player Column -->
+  <ng-container matColumnDef="player">
+    <th mat-sort-header="player" mat-header-cell *matHeaderCellDef> Player </th>
+    <td mat-cell *matCellDef="let element"> {{element.player}} </td>
+  </ng-container>
+
+  <!-- Payment Date Column -->
+  <ng-container matColumnDef="paymentdate">
+    <th mat-sort-header="paymentdate" mat-header-cell *matHeaderCellDef> Payment Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.paymentdate}} </td>
+  </ng-container>
+
+  <!-- Paid Column -->
+  <ng-container matColumnDef="paid">
+    <th mat-sort-header="paid" mat-header-cell *matHeaderCellDef> Paid </th>
+    <td mat-cell *matCellDef="let element"> {{element.paid}} </td>
+  </ng-container>
+
+  <!-- Comp Column -->
+  <ng-container matColumnDef="comp">
+    <th mat-sort-header="comp" mat-header-cell *matHeaderCellDef> Comp. </th>
+    <td mat-cell *matCellDef="let element"> {{element.comp}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<div class="paginator">
+  <mat-paginator [length]="4" [pageSize]="50" [pageSizeOptions]="[50, 100, 150, 200]" aria-label="Select page">
+  </mat-paginator>
+</div>

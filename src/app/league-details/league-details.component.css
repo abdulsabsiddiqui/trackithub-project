@@ -1,0 +1,42 @@
+form {
+  background-color: #3E485D;
+}
+
+.league-filter {
+  padding-left: 10px;
+}
+
+:host ::ng-deep .mat-mdc-form-field-flex {
+  padding-bottom: 0;
+  background-color: #3E485D;
+}
+
+:host ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+  border-bottom-color: #FFF;
+  color: #FFF;
+}
+
+:host ::ng-deep mat-icon,
+mat-icon.mat-primary,
+mat-icon.mat-accent,
+mat-icon.mat-warn {
+  color: #7BC955;
+}
+
+:host ::ng-deep .mat-sort-header-content {
+  color: #ACAABD;
+}
+
+:host ::ng-deep .mat-mdc-form-field:not(.mat-form-field-disabled) .mat-mdc-floating-label.mdc-floating-label {
+  color: #FFF;
+}
+
+button {
+  background-color: transparent;
+  border: 0px;
+  color: #fff;
+}
+
+:host ::ng-deep .paginator .mat-mdc-form-field-flex {
+  background-color: #FFF;
+}
